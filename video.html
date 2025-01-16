@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Player</title>
+</head>
+<body>
+    <div>
+        <iframe 
+            width="560" 
+            height="315" 
+            id="videoFrame"
+            src=""
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+    fetch('/video')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('videoFrame').src = data.video;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    </script>
+</body>
+</html>
