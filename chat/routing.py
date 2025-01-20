@@ -6,4 +6,4 @@ websocket_urlpatterns = [
 ]
 
 
-#테스트222
+#테스트 park test
