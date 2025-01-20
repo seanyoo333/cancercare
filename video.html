@@ -17,10 +17,10 @@
     </div>
 
     <script>
-    fetch('/video')
+    fetch('http://127.0.0.1:8000/video')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('videoFrame').src = data.video;
+            document.getElementById('videoFrame').src = data.videos.id;
         })
         .catch(error => {
             console.error('Error:', error);
